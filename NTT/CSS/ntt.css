@@ -14,7 +14,7 @@
 
 .fullWidth{
     width: 100%;
-    margin-bottom: 80px;
+    margin-bottom: 11%;
 }
 
 header {
@@ -22,6 +22,7 @@ header {
     top: 0;
     left: 0;
     background-color: white;
+    z-index: 1;
 }
 
 .fullWidth:first-child{
@@ -33,6 +34,10 @@ header {
 .container{
     max-width: calc(100% - 40px);
     margin: 0 auto;
+}
+
+.desplegable {
+    display: none;
 }
 
 .container1270{
@@ -97,8 +102,26 @@ header {
     padding-right: 0;
 }
 
+.swiper-container{
+    z-index: 0 !important;
+}
+
+.swiper-slide{
+    height: calc(100% - 111px);
+}
+
 .portada{
-    background-image: url("../img/Port.png"),url("../img/Rectángulo\ 34.png");
+    background-image: url("../img/Port.png");
+    background-repeat: no-repeat;
+    height: calc(100% - 111px);
+    margin-top: 111px;
+    background-size: cover;
+    
+
+}
+
+.cara{
+    background-image: url("../img/vaccination.jpg");
     background-repeat: no-repeat;
     height: calc(100% - 111px);
     margin-top: 111px;
@@ -106,24 +129,26 @@ header {
 
 }
 
+
+
 .port{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 100%;
+    
 }
 
 .NTT{
     
-    margin-top: 14em;
-    margin-right: 17em;
+    margin-top: 18%;
+    margin-right: 14%;
 }
 
 .texto {
     font-family: "Roboto";
     font-size: 40px;
-    margin-right: 4.4em;
+    margin-right: 20.5%;
     color: white;
     font-weight: normal;
 }
@@ -132,7 +157,7 @@ header {
     font-weight: bold;
     font-family: "Roboto";
     font-size: 40px;
-    margin-right: 2.8em;
+    margin-right: 13.5%;
     color: white;
 }
 
@@ -141,8 +166,8 @@ header {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    margin-top: 20px;
-    margin-right: 7em;
+    margin-top: 3%;
+    margin-right: 1%;
 }
 
 .info{
@@ -151,7 +176,6 @@ header {
     color: white;
     width: 45%;
     font-weight: normal;
-    margin-right: -.6em;
     margin-top: 20px;
     margin-bottom: 98px;
 }
@@ -162,6 +186,7 @@ header {
     align-items: center;
     font-size: 40px;
     font-family: "Roboto";
+    margin-bottom: 2%;
 }
 
 .datos{
@@ -197,22 +222,23 @@ header {
     margin-left: 10px;
 }
 
-.cartas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 15%;
+.carta{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 10%;
+    list-style-type: none;
+    row-gap: 6%;
 }
 
-.card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 33%;
-    margin-bottom: 60px;
-  
+.space{
+    margin-left: 2%;
+    width: 50%;
+    margin-bottom: 40px;
+    margin-right: 5%;
+    position: relative;
+    margin-top: 5% ;
 }
+
 
 .servicio{
     display: flex;
@@ -221,16 +247,7 @@ header {
   
 }
 
-.card-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    list-style-type: none;
-    
-}
-
-.tete{
+.name-card{
     font-family: "Roboto";
     font-weight: bold;
     font-size: 20px;
@@ -238,22 +255,26 @@ header {
   
 }
 
-.des{
+.card{
     font-family: "Roboto";
-    width: 70%;
-    margin-bottom: 40px ;
-    height: 130px;
+    width: 100%;
+    margin-bottom: 10% ;
     padding-top: 30px;
     font-size: 16px;
+    font-weight: normal;
 }
 
 .bot{
-    height: 41px;
-    width: 205px;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 10%;
+    padding-right: 0;
     background-color: white;
     font-family: "roboto";
     font-size: 14px;
     font-weight: bold;
+    position: absolute;
 }
 
 .bot > img{
@@ -269,10 +290,6 @@ header {
     font-size: 16px;
 }
 
-.rec{
-    width: 80px;
-    height: 80px;
-}
 
 .foot{
     background-color: #0071BC;
@@ -328,6 +345,7 @@ a {
     margin-bottom: 0;
     margin-left: 5%;
     font-family: "Roboto";
+    padding-bottom: 20px;
 }
 
 .bio > h3 {
@@ -335,4 +353,208 @@ a {
     font-size: 20px;
     margin-top: 20px;
     color: white;
+}
+
+@media (max-width: 1024px) {
+
+    .head{
+        justify-content: space-around;
+    }
+
+    .desplegable {
+        display: inline;
+    }
+
+    .dep{
+      
+        padding-left: 100%;
+        padding-right: 100%;
+        background-color: white;
+        font-size: 30px;
+        display: flex;
+        border: transparent;
+        justify-content: center;
+        
+
+    }
+
+
+    .list{
+            display: none;
+        }
+
+    .lista{
+            display: none;
+            flex-direction: column;
+            
+            height: 0;
+            width: 30%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: white;
+            overflow-y: hidden;
+            transition: 0.5s;
+            border: solid;
+            border-top-left-radius: 10%;
+            border-bottom-left-radius:  10%;
+    }
+
+    .listado{
+        border-bottom: solid;
+        width: 100%;
+        padding: 8px 60px 8px 60px;
+        justify-content: flex-start;
+    }
+
+    .listado:last-child{
+        padding-right: 60px;
+    }
+
+    .add{
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .port {
+      
+        justify-content: flex-start;
+        align-items: flex-start;
+    
+    }
+    
+
+
+    .space{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bold{
+        margin-right: 4%;
+    }
+
+   .space > a {
+        display: flex;
+        justify-content: flex-start;
+   }
+
+    .carta{
+       
+        grid-template-columns: auto auto;
+        row-gap: 3%;
+        
+    }
+
+    .servicio{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .card{
+       
+        margin-bottom: 30% ;
+      
+    }
+
+    .foot{
+        margin-top: 30%;
+    }
+
+    
+}
+
+@media (max-width: 650px) {
+
+    .portada{
+        background-image: url("../img/pportada-movil.png");
+        width: 0;
+    }
+
+    .port {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+    }
+
+    .data{
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .datos{
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .space{
+        width:  75%;
+    }
+
+
+   
+}
+
+@media (max-width: 500px){
+  
+    
+    .space{
+        width:  80%;
+    }
+
+
+
+    .belong {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .carta{
+        margin-left: 0;
+        grid-template-columns: auto ;
+        row-gap: 3%;
+        
+    }
+
+    .titulo{
+        margin-bottom: 10%;
+    }
+
+    .final{
+        flex-direction: column;
+    }
+
+    .bio{
+        justify-content: center;
+    }
+
+    
+
+    .foot{
+        margin-top: 100%;
+    }
+
+    .listas{
+        margin-top: 10%;
+    }
+
+    .NTT{
+        margin-right: 0;
+        width: 70%;
+        margin-bottom: 10%;
+    }
+
+    .texto, .bold{
+        font-size: 26px;
+    }
+
+    .info{
+        font-size: 20px;
+        width: 70%;
+        margin-top: 5%;
+    }
 }

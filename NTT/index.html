@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/ntt.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+   
     <title>NTT</title>
 </head>
 <body>
@@ -23,102 +26,137 @@
                     <li class="listado">NTT GROUP<p> + </p></li>
                 </ul>
             </div>
+
+            <div class="desplegable">
+                <button class="dep" id="boton">☰</button>
+                <ul class="lista" id="lista">
+                    <li class="listado">COVID-19 <p> + </p></li>
+                    <li class="listado">OUR BUSINESS<p> + </p></li>
+                    <li class="listado">OUR INNOVATION</li>
+                    <li class="listado">INSIGHTS<p> + </p></li>
+                    <li class="listado">CAREERS</li>
+                    <li class="listado">ABOUT US<p> + </p></li>
+                    <li class="listado">NTT GROUP<p> + </p></li>
+                </ul>
+            </div>
         </div>
     </header>
 
-    <section class="fullWidth portada">
-        <div class=" port container container1270">
-            <img src="img/Grupo 1.png" alt="logo" class="NTT">
-            <div class="add">
-                <h2 class="texto">Delivering the</h2>
-                <h2 class="bold">connected future</h2>
-                <h3 class="info">Empowering people, clients, and communities through technology
-                and innovation.</h3>
+    <section class="fullWidth  swiper-container">
+        <div class="swiper-wrapper">
+            <div class="portada swiper-slide">
+                <div class=" port container container1270">
+                    <img src="img/Grupo 1.png" alt="logo" class="NTT">
+                    <div class="add">
+                        <h2 class="texto">Delivering the</h2>
+                        <h2 class="bold">connected future</h2>
+                        <h3 class="info">Empowering people, clients, and communities through technology
+                        and innovation.</h3>
+                    </div>
+                </div>
+                 </div>
+                <div class="cara swiper-slide">
+                    <div class=" port container container1270">
+                        <img src="img/Grupo 1.png" alt="logo" class="NTT">
+                        <div class="add">
+                            <h2 class="texto">Delivering the</h2>
+                            <h2 class="bold">connected future</h2>
+                            <h3 class="info">Empowering people, clients, and communities through technology
+                            and innovation.</h3>
+                        </div>
+                    </div>
+                
             </div>
-        </div>
+       </div>
+        
     </section>
 
+    <section class="fullWidth">
+        <div class="belong container container1270">
+            <h2 class="titulo">Working together to deliver vaule</h2>
+            <div class="data">
+                <h3 class="datos">As one of the largest global technology service providers, 
+                    we partner with you to achieve your required business outcomes 
+                    through our global assets and capabilities in networking, 
+                    data centers and hybrid cloud, workplace, security and managed services.</h3>
+                <h3 class="datos">Our comprehensive portfolio of agile, 
+                    scalable technology services enables you to create improved 
+                    experiences for your employees and customers, 
+                    reduce complexity in your hybrid environment and optimize 
+                    the performance of your organization. 
+                    We support you to be sustainable, market-leading, and adaptive.  </h3>
+                    <a href="#"><button class="boton"> HEAR FROM OUR LEADERS <img src="img/Grupo 250.png" alt=""> </button></a>  
+            </div>
+        </div>
+       
+
+    </section>
+
+    
     <section class="fullWidth">
         <div class="container container1270">
-            <h2 class="titulo">Working together to deliver value</h2>
-        </div>
-        <div class="data">
-            <h3 class="datos">As one of the largest global technology service providers, 
-                we partner with you to achieve your required business outcomes 
-                through our global assets and capabilities in networking, 
-                data centers and hybrid cloud, workplace, security and managed services.</h3>
-            <h3 class="datos">Our comprehensive portfolio of agile, 
-                scalable technology services enables you to create improved 
-                experiences for your employees and customers, 
-                reduce complexity in your hybrid environment and optimize 
-                the performance of your organization. 
-                We support you to be sustainable, market-leading, and adaptive.  </h3>
-                <a href="#"><button class="boton"> HEAR FROM OUR LEADERS <img src="img/Grupo 250.png" alt=""> </button></a>  
-        </div>
-
-    </section>
-    <section class="fullWidth">
-        <div class= "cartas container container1270">
-            <div class="card">
-                
-                <ul class="card-list">
+            <h2 class="titulo">Our services</h2>
+            <ul class="carta">
+                <li class="space">
                     <img src="img/serv1.png" class="servicio" alt="">
-                    <li class="tete">Cloud communications</li>
-                    <li class="des">Providing world-class cloud communication solutions that enable dynamic collaboration interactions and smarter workspaces.</li>
-                  
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
-           <div class="card">
-                <ul class="card-list">
+                    <h2 class="name-card">Cloud communications</h2>
+                    <p class="card">Providing world-class cloud communication soultions that enable dynamic collaboration interactions and smarter workspaces.</p>
+                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a> 
+                </li>
+
+                <li class="space">
+
                     <img src="img/serv2.png" class="servicio" alt="">
-                    <li class="tete">Managed Cloud Services</li>
-                    <li class="des">Realize business outcomes aligned to the goals of your organization.</li>
-                  
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
-             <div class="card">
-                <ul class="card-list">
+                    <h2 class="name-card">Managed Cloud Services</h2>
+                    <p class="card ">Realize business outcomes aligned to the goals of your organization.</p>
+          
+            <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a> 
+                </li>
+
+                <li class="space">
+
                     <img src="img/serv3.png" class="servicio" alt="">
-                    <li class="tete">Global Networks</li>
-                    <li class="des">Our Networking Services are secure by design, efficiently supporting and managing the most demanding software-defined, high-performance hybrid environments. </li>
+                    <p class="name-card">Global Networks</p>
+                    <p class="card">Our Networking Services are secure by cardign, efficiently supporting and managing the most demanding software-defined, high-performance hybrid environments.</p>
+          
+                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a> 
+
+                </li>
+
+                <li class="space">
+                    <img src="img/serv4.png" class="servicio" alt="">
+                    <h2 class="name-card">Security</h2>
+                    <p class="card">Migrate to the cloud with a holistic approach wrapped in security from the beginning that provicard you with a scalable future.</p>
                   
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="card-list">
-                <img src="img/serv4.png" class="servicio rec" alt="">
-                    <li class="tete">Security</li>
-                    <li class="des">Migrate to the cloud with a holistic approach wrapped in security from the beginning that provides you with a scalable future.</li>
-                  
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="card-list">
-                <img src="img/serv5.png" class="servicio" alt="">
-                    <li class="tete">Global Data Centers</li>
-                    <li class="des">Our data centers provide state-of-the art, secure and interconnected solutions that extend across our global platform.</li>
-                  
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
-            <div class="card">
-                <ul class="card-list">
-                <img src="img/serv6.png" class="servicio" alt="">
-                    <li class="tete">WhiteHat Security</li>
-                    <li class="des">WhiteHat Security is the leading advisor for 
-                        application security with the most comprehensive platform powered by artificial and human intelligence. </li>
-                  
-                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.png" alt=""></button></a> 
-                </ul>
-            </div>
+                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a>
                 
+                </li>
+
+                <li class="space">
+
+                    <img src="img/serv5.png" class="servicio" alt="">
+                    <h2 class="name-card">Global Data Centers</h2>
+                    <p class="card">Our data centers provide state-of-the art, secure and interconnected soultions that extend across our global platform.</p>
+                                    
+                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a> 
+                                    
+
+                </li>
+
+                <li class="space">
+
+                    <img src="img/serv6.png" class="servicio" alt="">
+                    <h2 class="name-card">WhiteHat Security</h2>
+                    <p class="card">WhiteHat Security is the leading advisor for 
+                        application security with the most comprehensive platform powered by artificial and human intelligence.</p>
+                  
+                    <a href="#"><button class="bot">READ MORE <img src="img/external-black.svg" alt=""></button></a> 
+
+                </li>
+
+              
         </div>
     </section>
-
     <footer class="fullWidth foot">
         <div class=" final container container1270">
             <div>
@@ -136,7 +174,7 @@
             </div>
             <div class="listas">
                 <h3>INSIGHTS</h3>
-                <lu  class="f-list"> 
+                <ul  class="f-list"> 
                     <li class="final-list">Introducing of NTT</li>
                     <li class="final-list">Delivering the next level
                     </li>
@@ -147,10 +185,10 @@
             </div>
             <div class="listas">
                 <h3>MORE NTT</h3>
-                <lu  class="f-list"> 
+                <ul  class="f-list"> 
                     <li class="final-list">NTT</li>
                     <li class="final-list">Our History</li>
-                    <li class="final-list">Our Values</li>
+                    <li class="final-list">Our Vaules</li>
                     <li class="final-list">NTT Group</li>
                     <li class="final-list"><a href="#">Investor Relations  <img src="img/external-white.png" alt=""></a>  </li>
                     <li class="final-list"><a href="#">News <img src="img/external-white.png" alt=""></a> </li> 
@@ -158,7 +196,7 @@
             </div>
             <div class="listas">
                 <h3>INFORMATION</h3>
-                <lu  class="f-list"> 
+                <ul  class="f-list"> 
                     <li class="final-list">Cookie Policy</li>
                     <li class="final-list">Terms and Conditions</li>
                     <li class="final-list">Site Map</li>
@@ -169,5 +207,7 @@
             <h3>© 2020 NTT, Inc. All Rights Reserved</h3>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="JS/ntt.js"></script> <script src="JS/eventos.js"></script>
 </body>
 </html>

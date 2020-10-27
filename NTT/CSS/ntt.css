@@ -36,17 +36,15 @@ header {
     margin: 0 auto;
 }
 
-.desplegable {
-    display: none;
+.container1270{
+    width: 1270px;
+    margin-bottom: 50px;
 }
 
-.container1270{
-    margin-bottom: 30px;
-}
 
 .head{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 20px;
 }
@@ -57,6 +55,10 @@ header {
     align-items: center;
 }
 
+.sub{
+    display: none;
+}
+
 .logo{
     width: 142px;
     height: 51px;
@@ -64,39 +66,79 @@ header {
  
 }
 
-.lista {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style-type: none;
-    font-family: "ROBOTO";
-    font-size: 12px;
-    font-weight: bold;
-    color: #0071BC;
-    align-items: flex-end;
+.sub{
+    display: none;
+    position: absolute;
+    border: solid 1px;
+    z-index: 1;
+    
 }
 
-.list{
+.lista {
     display: flex;
-    justify-content: center;
+    font-weight: bold;
+    font-family: "ROBOTO";
+    font-size: 12px;
+    color:#0071BC;
+	text-decoration:none;
+	padding:10px 12px;
+	display:block;
+}
+
+
+
+.menu{
+    position:relative;
+    width: 130px;
+    display: flex;
     align-items: center;
-    margin-left: 5em;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    justify-content: center;
+    border-top: 1px #0071BC;
+}
+
+.menu:hover{
+    background-color: rgb(240, 240, 240);
+
+}
+
+
+ul, ol {
+    list-style: none;
+   
+}
+
+.dep{
+    display: none;
+}
+
+.lista > .listado:hover > .sub{
+    display: block;
+    background-color: rgb(250, 250, 250);
 }
 
 .listado{
-    padding-right: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    float: left;
+    width: 130px;
 }
 
-.listado > p {
-    font-size: 14px;
-    display: flex;
-    align-items: flex-end;
-    margin-left: 10px;
-    
+.nope::after{
+    content: " " !important;
 }
+
+.listado::after{
+    content: "\002B";
+    font-size: 12px;
+    color:#0071BC;
+    margin-left: 2%;
+}
+
+.link{
+    text-decoration: none;
+    color: #0071BC;
+}
+
 
 .listado:last-child{
     padding-right: 0;
@@ -232,7 +274,7 @@ header {
 
 .space{
     margin-left: 2%;
-    width: 50%;
+    width: 70%;
     margin-bottom: 40px;
     margin-right: 5%;
     position: relative;
@@ -355,20 +397,14 @@ a {
     color: white;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1299px) {
 
     .head{
-        justify-content: space-around;
+        justify-content: space-between;
     }
+    
 
-    .desplegable {
-        display: inline;
-    }
-
-    .dep{
-      
-        padding-left: 100%;
-        padding-right: 100%;
+    .dep{       
         background-color: white;
         font-size: 30px;
         display: flex;
@@ -378,44 +414,94 @@ a {
 
     }
 
-
     .list{
-            display: none;
-        }
+        position: fixed;
+        margin-left: 0;
+        background-color: white;
+        height: 100%;
+        transition: .3s;
+        width: 30%;
+        right: -30%;
+        top: 0;
+    }
 
     .lista{
-            display: none;
             flex-direction: column;
-            
-            height: 0;
-            width: 30%;
-            position: fixed;
+            height: 100%;
+            padding: 0;
+    }
+
+    .sub{
+            display: none;
+            position: absolute;
             top: 0;
-            right: 0;
-            background-color: white;
-            overflow-y: hidden;
-            transition: 0.5s;
-            border: solid;
-            border-top-left-radius: 10%;
-            border-bottom-left-radius:  10%;
+            right: 100%;
+            width: 100%;
+            margin-top: -1.2%;
+            padding: 10px 12px;
+            border: solid #0071BC;
+    }
+    
+    .menu {
+            width: 100%;
+            padding: 2%;
+    }
+
+    .menu:hover{
+        background-color: #0071BC;
+        color: white;
     }
 
     .listado{
-        border-bottom: solid;
-        width: 100%;
-        padding: 8px 60px 8px 60px;
-        justify-content: flex-start;
+        position: relative;
     }
 
-    .listado:last-child{
-        padding-right: 60px;
+    .listado:hover, .listado:last-child:hover{
+        background-color: #0071BC;
+        color: white;
+    }
+
+    .nope:hover > a{
+        background-color: #0071BC;
+        color: white;
+    }
+
+    .menu:hover{
+        background-color: #0071BC;
+        color: white;
+    }
+
+    .menu:hover > .link{
+
+        color: white;
+    }
+
+   
+
+    .listado:first-child{
+        border-top: solid #0071BC;
+    }
+    .listado,.listado:last-child{
+        border-bottom: solid;
+        width: 100%;
+        padding: 20px;
+        height: 10%;
+        justify-content: flex-start;background-color: white;
+    }
+
+}
+
+@media (max-width: 1199px) {
+
+   
+    .swiper-slide{
+        width: 100% !important;
     }
 
     .add{
         justify-content: flex-start;
         align-items: flex-start;
     }
-
     .port {
       
         justify-content: flex-start;
@@ -454,7 +540,7 @@ a {
 
     .card{
        
-        margin-bottom: 30% ;
+        margin-bottom: 10% ;
       
     }
 
@@ -465,21 +551,25 @@ a {
     
 }
 
-@media (max-width: 650px) {
+@media (max-width: 860px) {
+
+    .dep{
+      
+        margin-left: 30%;
+        
+      
+        
+
+    }
 
     .portada{
         background-image: url("../img/pportada-movil.png");
         width: 0;
     }
 
-    .port {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: 100%;
-    }
+    
 
+   
     .data{
         align-items: flex-start;
         text-align: left;
@@ -494,11 +584,24 @@ a {
         width:  75%;
     }
 
+    .final{
+        flex-direction: column;
+    }
+
+    .bio{
+        justify-content: center;
+    }
+
 
    
 }
 
-@media (max-width: 500px){
+@media (max-width: 715px){
+
+    .dep{
+      
+        margin-left: 0;
+    }
   
     
     .space{
@@ -524,15 +627,14 @@ a {
         margin-bottom: 10%;
     }
 
-    .final{
-        flex-direction: column;
+
+    .space{
+        width: 90%;
     }
 
-    .bio{
-        justify-content: center;
+    .card{
+        margin-bottom: 5%;
     }
-
-    
 
     .foot{
         margin-top: 100%;

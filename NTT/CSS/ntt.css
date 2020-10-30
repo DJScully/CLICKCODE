@@ -66,6 +66,13 @@ header {
  
 }
 
+.dep{
+    background: #ffffff;
+    color: white;
+    border: none;
+}
+
+
 .sub{
     display: none;
     position: absolute;
@@ -75,7 +82,6 @@ header {
 }
 
 .lista {
-    display: flex;
     font-weight: bold;
     font-family: "ROBOTO";
     font-size: 12px;
@@ -109,9 +115,7 @@ ul, ol {
    
 }
 
-.dep{
-    display: none;
-}
+
 
 .lista > .listado:hover > .sub{
     display: block;
@@ -397,7 +401,7 @@ a {
     color: white;
 }
 
-@media (max-width: 1299px) {
+@media (max-width: 1228px) {
 
     .head{
         justify-content: space-between;
@@ -410,7 +414,7 @@ a {
         display: flex;
         border: transparent;
         justify-content: center;
-        
+        color: black;
 
     }
 
@@ -454,6 +458,8 @@ a {
 
     .listado{
         position: relative;
+        display: flex;
+        align-items: center;
     }
 
     .listado:hover, .listado:last-child:hover{
@@ -476,13 +482,11 @@ a {
         color: white;
     }
 
-   
+    
 
-    .listado:first-child{
-        border-top: solid #0071BC;
-    }
+
     .listado,.listado:last-child{
-        border-bottom: solid;
+       
         width: 100%;
         padding: 20px;
         height: 10%;

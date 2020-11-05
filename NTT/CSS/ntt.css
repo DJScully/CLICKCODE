@@ -54,11 +54,6 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-.sub{
-    display: none;
-}
-
 .logo{
     width: 142px;
     height: 51px;
@@ -415,7 +410,14 @@ a {
         border: transparent;
         justify-content: center;
         color: black;
+        position: fixed;
+        right: 20px;
+        z-index: 1;
+        position: inherit;
+    }
 
+    .dep.active{
+        display: block;
     }
 
     .list{
@@ -435,20 +437,25 @@ a {
             padding: 0;
     }
 
-    .sub{
-            display: none;
-            position: absolute;
-            top: 0;
-            right: 100%;
-            width: 100%;
-            margin-top: -1.2%;
-            padding: 10px 12px;
-            border: solid #0071BC;
-    }
-    
+ 
     .menu {
             width: 100%;
             padding: 2%;
+    }
+
+    .listado:hover > .sub {
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        margin-top: 17%;
+        padding-right: 10px ;
+        transition: .3s;
+    }
+
+    .listado:hover{
+        transition: .3s;
     }
 
     .menu:hover{
@@ -458,21 +465,11 @@ a {
 
     .listado{
         position: relative;
-        display: flex;
+        display: inline;
         align-items: center;
     }
 
-    .listado:hover, .listado:last-child:hover{
-        background-color: #0071BC;
-        color: white;
-    }
-
     .nope:hover > a{
-        background-color: #0071BC;
-        color: white;
-    }
-
-    .menu:hover{
         background-color: #0071BC;
         color: white;
     }
@@ -482,15 +479,19 @@ a {
         color: white;
     }
 
+    .nope{
+        margin-bottom: 0;
+    }
+
     
 
 
     .listado,.listado:last-child{
-       
+        flex-direction: column;
         width: 100%;
-        padding: 20px;
+        padding: 40px;
         height: 10%;
-        justify-content: flex-start;background-color: white;
+       margin-bottom: 15%;
     }
 
 }
@@ -513,7 +514,9 @@ a {
     
     }
     
-
+    .listado:hover > .sub{
+        margin-top: 35%;
+    }
 
     .space{
         flex-direction: column;
@@ -557,6 +560,12 @@ a {
 
 @media (max-width: 860px) {
 
+    .logo{
+        margin-right: 30px;
+     
+    }
+    
+
     .dep{
       
         margin-left: 30%;
@@ -564,6 +573,10 @@ a {
       
         
 
+    }
+
+    .listado:hover > .sub{
+        margin-top: 40%;
     }
 
     .portada{

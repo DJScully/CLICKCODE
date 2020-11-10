@@ -412,7 +412,7 @@ a {
         color: black;
         position: fixed;
         right: 20px;
-        z-index: 1;
+        z-index: 2;
         position: inherit;
     }
 
@@ -439,18 +439,15 @@ a {
 
  
     .menu {
-            width: 100%;
-            padding: 2%;
+        
+        width: 100%;
+        padding: 2%;
     }
 
+   
+
     .listado:hover > .sub {
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        width: 100%;
-        margin-top: 17%;
-        padding-right: 10px ;
+        
         transition: .3s;
     }
 
@@ -463,11 +460,7 @@ a {
         color: white;
     }
 
-    .listado{
-        position: relative;
-        display: inline;
-        align-items: center;
-    }
+ 
 
     .nope:hover > a{
         background-color: #0071BC;
@@ -487,11 +480,13 @@ a {
 
 
     .listado,.listado:last-child{
-        flex-direction: column;
+        position: relative;
+        display: inline;
+        align-items: center;
         width: 100%;
         padding: 40px;
-        height: 10%;
-       margin-bottom: 15%;
+       
+       
     }
 
 }
@@ -515,7 +510,7 @@ a {
     }
     
     .listado:hover > .sub{
-        margin-top: 35%;
+        margin-top: 25%;
     }
 
     .space{
@@ -575,9 +570,6 @@ a {
 
     }
 
-    .listado:hover > .sub{
-        margin-top: 40%;
-    }
 
     .portada{
         background-image: url("../img/pportada-movil.png");
@@ -614,6 +606,13 @@ a {
 }
 
 @media (max-width: 715px){
+
+    .list {
+       
+        width: 50%;
+        right: -50%;
+       
+    }
 
     .dep{
       
@@ -677,3 +676,4 @@ a {
         margin-top: 5%;
     }
 }
+

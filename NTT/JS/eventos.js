@@ -2,33 +2,34 @@ document.addEventListener("readystatechange", cargarEventos, false);
 
 function cargarEventos(evento) {
 	if(document.readyState == "interactive") {
-        document.getElementById("boton").addEventListener("click",openNav,false);
-        //document.getElementById("boton").addEventListener("click",closeBtn,false);
-        
-        var total = document.getElementsByClassName("menu");
-
-        for (let index = 0; index < total.length; index++) {
-           
-           total[index].addEventListener("click",closeNav,true);
-             
-        }
-        document.getElementsByClassName("nope")[0].addEventListener("click",closeNav,true);
-        document.getElementsByClassName("nope")[1].addEventListener("click",closeNav,true);
-        document.getElementsByClassName("listado")[0].addEventListener("mouseover",move1,false);        
-        document.getElementsByClassName("listado")[1].addEventListener("mouseover",move2,false);
-        document.getElementsByClassName("listado")[3].addEventListener("mouseover",move3,false);
-        document.getElementsByClassName("listado")[5].addEventListener("mouseover",move4,false);
-        document.getElementsByClassName("listado")[6].addEventListener("mouseover",move5,false);
-        
-        document.getElementsByClassName("listado")[0].addEventListener("mouseout",out1,false);
-        document.getElementsByClassName("listado")[1].addEventListener("mouseout",out2,false);
-        document.getElementsByClassName("listado")[3].addEventListener("mouseout",out3,false);
-        document.getElementsByClassName("listado")[5].addEventListener("mouseout",out4,false);
-        document.getElementsByClassName("listado")[6].addEventListener("mouseout",out5,false);
-       /* for (let index = 0; index < array.length; index++) {
-            document.getElementsByClassName("sub")[index].addEventListener("mouseover",move,false)
-          
-        }  */
+       		// Asigna el evento 'click' a todos los elementos con la clase "menu"
+		document.querySelectorAll('.menu').forEach(item => {
+		    item.addEventListener('click', closeNav, true);
+		});
+		
+		// Asigna el evento 'click' a los elementos con la clase "nope"
+		document.querySelectorAll('.nope').forEach(item => {
+		    item.addEventListener('click', closeNav, true);
+		});
+		
+		// Asigna los eventos 'mouseover' y 'mouseout' a los elementos con la clase "listado"
+		const listados = document.querySelectorAll('.listado');
+		
+		listados[0].addEventListener('mouseover', move1, false);
+		listados[1].addEventListener('mouseover', move2, false);
+		listados[3].addEventListener('mouseover', move3, false);
+		listados[5].addEventListener('mouseover', move4, false);
+		listados[6].addEventListener('mouseover', move5, false);
+		
+		listados[0].addEventListener('mouseout', out1, false);
+		listados[1].addEventListener('mouseout', out2, false);
+		listados[3].addEventListener('mouseout', out3, false);
+		listados[5].addEventListener('mouseout', out4, false);
+		listados[6].addEventListener('mouseout', out5, false);
+	       /* for (let index = 0; index < array.length; index++) {
+	            document.getElementsByClassName("sub")[index].addEventListener("mouseover",move,false)
+	          
+	        }  */
 	}
 }
 //alert(document.getElementsByClassName("sub")[0].style.right);
